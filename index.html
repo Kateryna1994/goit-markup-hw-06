@@ -15,12 +15,12 @@
 
     <header class="header">
     <div class="container-header main-nav">
-        <a href="#" class="logo">
+        <a href="./index.html" class="logo">
             Web<span class="studio">Studio</span>
         </a>
             <nav >
                 <ul class=" site-nav list">
-                    <li class="site-item"> <a href="./index.html" class="link site-title">Студія</a></li>
+                    <li class="site-item"> <a href="./index.html" class="link site-title current">Студія</a></li>
                     <li class="site-item"> <a href="./portfolio.html" class=" link site-title">Портфоліо</a></li>
                     <li class="site-item"> <a href="./index.html" class="link site-title">Контакти</a></li>
                 </ul>
@@ -74,7 +74,6 @@
                             <svg width="70px" height="70px" class="icon-clock-1">
                                 <use href="./images/symbol-defs.svg#icon-clock-1"></use>
                             </svg>
-
                         </div>
                         <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
                         <p class="desc">Завдання організації, особливо рамки імісце навчання кадрів тягне у себе.</p>
@@ -107,21 +106,16 @@
                 <h2 class="heading">Чим ми займаємося</h2>
                 <ul class="list image-block">
                     <li class="image-title">
-                        <img class="" src="./images/img.jpg" alt="робота за ноутбуком" width="370">
+                        <img class="image" src="./images/img.jpg" alt="робота за ноутбуком" width="370">
                         <p class="work">Десктопні додатки</p>
                     </li>
                     <li class="image-title">
-                        <img class="" src="./images/img(1).jpg" alt="ноутбук на столі" width="370">
+                        <img class="image" src="./images/img(1).jpg" alt="ноутбук на столі" width="370">
                         <p class="work">Мобільні додатки</p>
                     </li>
                     <li class="image-title">
-                        <img class="" src="./images/img(2).jpg" alt="планшет в руках" width="370">
+                        <img class="image" src="./images/img(2).jpg" alt="планшет в руках" width="370">
                         <p class="work">Дизайнерські рішення</p>
-                    </li>
-                    <li class="image-block">
-                       
-                       
-                       
                     </li>
                </ul>
             </div>
@@ -129,9 +123,7 @@
        
         <section class="sidebar">
             <div class="side-container">
-                <h2 class="section-title heading-sitebar">Наша команда</h2>
-            </div>
-            <div class="side-container">
+                <h2 class="heading-sitebar">Наша команда</h2>
                 <ul class="list sidebar-container">
                     <li class="flex-title">
                         <div class="">
@@ -262,8 +254,8 @@
             </div>        
         </section>
         <section class="section">
-            <h2 class="customers">Постійні клієнти</h2>
             <div class="container">
+                <h2 class="customers">Постійні клієнти</h2>
                 <ul class="client list items">
                     <li class="item-clients">
                         <a href="" class="clients">
@@ -315,8 +307,52 @@
     </main>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
+            <h1 class="modal-text">Залиште свої дані, ми вам передзвонимо</h1>
+            <form class="modal-form">
+                <ul>
+                    <li class="form-field">
+                        <label for="name">Ім'я</label>
+                        <div class="input-wrap">
+                            <input type="text" name="name" id="name">
+                            <svg width="12px" height="12px" class="icon-input">
+                                <use href="./images/symbol-defs2.svg#icon-person-black"></use>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="form-field">
+                        <label for="tel">Телефон</label>
+                        <div class="input-wrap">
+                            <input type="text" name="tel" id="tel">
+                            <svg width="12px" height="12px" class="icon-input">
+                                <use href="./images/symbol-defs2.svg#icon-phone-black"></use>
+                            </svg>
+                        </div>
+                    </li>
+
+                    <li class="form-field">
+                        <label for="email">Пошта</label>
+                        <div class="input-wrap">
+                            <input type="text" name="email" id="email"> 
+                            <svg width="12px" height="12px" class="icon-input">
+                                <use href="./images/symbol-defs2.svg#icon-email-black"></use>
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+                <div class="form-comment">
+                    <label for="comment">Коментар</label>
+                    <textarea name="comment" id="comment" rows="10" placeholder="Введіть текст"></textarea>
+                </div>
+                <div class="policy">
+                    <input type="checkbox" value="policy" id="policy">
+                    <label for="policy">Погоджуюся з розсилкою та приймаю <span class="policy-text">Умови договору</span> </label>
+                </div>
+                
+                <button type="submit" class="form-button">Відправити</button>
+
+            </form>
             <button data-modal-close type="button" class="modal-button">
-                <svg width="30px" height="27px" class="icon-close">
+                <svg width="18px" height="18px" class="icon-close">
                     <use href="./images/symbol-defs2.svg#icon-close-black-18dp"></use>
                 </svg>
             </button>
@@ -329,9 +365,9 @@
                     Web<span class="logo-title">Studio</span>
                 </a>
                 <address class="adress">м. Київ, пр-т Лесі Українки, 26</address>
-                <ul class="contacts-footer list"> 
-                    <li><a href="mailto:" class="contacts">info@devstudio.com</a></li> 
-                    <li><a href="tel:+" class="mailto contacts">+38 096 111 11 11</a></li>
+                <ul class="list"> 
+                    <li class="navigation"><a href="mailto:" class="contacts">info@devstudio.com</a></li> 
+                    <li class="navigation"><a href="tel:+" class="mailto contacts">+38 096 111 11 11</a></li>
                 </ul>
             </div>
             <div class="socials">
@@ -359,6 +395,18 @@
                         </svg></a>
                     </li>
                 </ul>
+            </div>
+            <div class="footer-subscription">
+                <h2 class="join">Підпишіться на розсилку</h2>
+                <form class="form-subscription">
+                    <input type="text" name="email" id="email" placeholder="E-mail">
+                    <button class="subscription">Підписатися
+                        <svg width="24px" height="24px" class="send">
+                            <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+                
             </div>
         </div>
     </footer>
