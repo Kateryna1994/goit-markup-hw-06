@@ -766,15 +766,28 @@ fill: var(--accent-text-color);
     margin-bottom: 4px;
     color: var(--primery-text-color);
 }
-.form-field input{
-    border-color:rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+
+.input-form{
+    width: 100%;
     height: 40px;
-    width: 448px;
+    padding-left: 38px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 4px;
+    color: #998e96;
+    background-color: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
 }
-.form-field input:hover, .form-field input:focus{
-    border-color: var(--accent-text-color);
+.input-form:focus{
+    outline: none;
+    border: 1px solid var(--accent-text-color);
 }
+.input-form:focus + .icon-input{
+    fill: var(--accent-text-color);
+  }
 .form-comment{
     display: flex;
     flex-direction: column;
@@ -801,8 +814,9 @@ fill: var(--accent-text-color);
     line-height: 1.17; 
     color: rgba(117, 117, 117, 0.5);
 }
-.form-comment textarea:hover, .form-comment textarea:focus{
-    border-color: var(--accent-text-color);
+.textarea:focus{
+    outline: none;
+    border: 1px solid var(--accent-text-color);
 }
 .input-wrap{
     position: relative;
@@ -820,30 +834,45 @@ fill: var(--accent-text-color);
     margin-bottom: 30px;
     margin-top: 20px;
 }
-.policy label{
+.policy-label{
+    display: flex;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     margin-left: 8.38px;
     color: var(--primery-text-color);
 }
-.policy input [type="checkbox"]{
+.policy-label::before {
+    content: "";
     width: 16px;
-    height: 15px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 1px;
+    display: block;
+    margin-right: 8px;}
+
+.policy-input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+.input-check:checked + .policy-label::before {
+    background-image: url(../images/iconcheck.svg);
+    border: none;
+    background-color: var(--accent-text-color);
+    background-repeat: no-repeat;
+    background-position: center;}
 .policy-text{
     position: relative;
+    margin-left: 2px;
     color: var(--accent-text-color);
-}
-.policy-text::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--accent-text-color);
-    transform: scaleX(1);
 }
 
 .form-button{
